@@ -93,7 +93,7 @@ it also allows a person to concentrate on one area of work in larger project, wh
 <h2 id="create_a_root_project"><a class="anchor" href="#create_a_root_project"></a>Create a root project</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The first step is to create a folder for the new project and add a <a href="https://docs.gradle.org/3.5/userguide/gradle_wrapper.html#sec:wrapper_generation">Gradle Wrapper</a> to the project. If you use the Build Init plugin then the necessary <code>settings.gradle</code> and <code>build.gradle</code> will also be added.</p>
+<p>The first step is to create a folder for the new project and add a <a href="https://docs.gradle.org/3.5/userguide/gradle_wrapper.html#sec:wrapper_generation">Gradle Wrapper</a> to the project. If you use the <a href="https://docs.gradle.org/3.5/userguide/build_init_plugin.html">Build Init plugin</a> then the necessary <code>settings.gradle</code> and <code>build.gradle</code> will also be added.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -277,7 +277,7 @@ BUILD SUCCESSFUL</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Gradle automatically detected that there is a <code>build</code> task in <code>greeting-library</code> and executed it. This is one of the powerful features of a Gradle multi-project. When tasks i subprojects have the same names by convention, then maintenance of the build will be easier and it is also to execute the same tasks in each project by just specifying it from the top.</p>
+<p>Gradle automatically detected that there is a <code>build</code> task in <code>greeting-library</code> and executed it. This is one of the powerful features of a Gradle multi-project. When tasks and subprojects have the same names by convention, then maintenance of the build will be easier and it is also to execute the same tasks in each project by just specifying it from the top.</p>
 </div>
 <div class="paragraph">
 <p>A single subproject does not truly make a multi-project, therefore the next step is to add a subproject which can consume this library,</p>
@@ -331,7 +331,7 @@ apply plugin : <span class="string"><span class="delimiter">'</span><span class=
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ mkdir greeter/src/main/java/greeter</pre>
+<pre>$ mkdir -p greeter/src/main/java/greeter</pre>
 </div>
 </div>
 <div class="listingblock">
@@ -783,7 +783,7 @@ BUILD SUCCESSFUL</pre>
 <h2 id="refactor_common_build_script_code"><a class="anchor" href="#refactor_common_build_script_code"></a>Refactor common build script code</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>At this point you might have noticed that you have common scriot code in both <code>greeting-plugin/build.gradle</code> and <code>greeter.build.gradle</code>. A key feature of Gradle is the ability to place such common build script code in the root project.</p>
+<p>At this point you might have noticed that you have common script code in both <code>greeting-plugin/build.gradle</code> and <code>greeter.build.gradle</code>. A key feature of Gradle is the ability to place such common build script code in the root project.</p>
 </div>
 <div class="paragraph">
 <p>Edit <code>build.gradle</code> in the root project and add the following code</p>
@@ -882,7 +882,7 @@ dependencies {
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-05-31 10:02:01 UTC
+Last updated 2017-06-05 20:22:14 UTC
 </div>
 </div>
 </body>
