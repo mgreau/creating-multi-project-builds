@@ -758,6 +758,18 @@ BUILD SUCCESSFUL</pre>
 <div class="paragraph">
 <p>Notice how most tasks are still up to date, but <code>distZip</code> and <code>distTar</code> has been re-run to include the documentation. If you unpack one of the archives (<code>zip</code> or <code>tar</code>) in <code>build/distributions</code> you will see the documentation included in the <code>html5</code> folder.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A strong feature of Gradle that sets it apart from some other build tools is how well it handles incremental building. It is not necessary to do a <code>./gradlew clean</code> before each build.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -863,7 +875,7 @@ dependencies {
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-06-06 11:56:53 UTC
+Last updated 2017-06-06 12:09:05 UTC
 </div>
 </div>
 </body>
