@@ -348,6 +348,23 @@ apply plugin : <span class="string"><span class="delimiter">'</span><span class=
 </div>
 </div>
 <div class="paragraph">
+<p>As the target is a distributable application, you also need to tell Gradle the name of the class which is the entry point to running the application. Edit the <code>build.gradle</code> file again and add</p>
+</div>
+<div class="listingblock">
+<div class="title">greeter/build.gradle</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="groovy">mainClassName = <span class="string"><span class="delimiter">'</span><span class="content">greeter.Greeter</span><span class="delimiter">'</span></span> <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Use <code>mainClassName</code> to set the entry point class. (This expects a class with a class emthod called <code>main</code>).</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
 <p>Run the build which will fail.</p>
 </div>
 <div class="listingblock">
@@ -392,42 +409,6 @@ Run with --stacktrace option to get the stack trace. Run with --info or --debug 
 </table>
 </div>
 <div class="paragraph">
-<p>Run the build again.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ ./gradlew build
-
-...
-
-FAILURE: Build failed with an exception.
-
-* What went wrong:
-A problem was found with the configuration of task ':greeter:startScripts'.
-&gt; No value has been specified for property 'mainClassName'.
-
-* Try:
-Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>As the target is a distributable application, you need to tell Gradle the name of the class which is the entry point to running the application. The build has failed because this information was missing. Edit the <code>build.gradle</code> file again and add</p>
-</div>
-<div class="listingblock">
-<div class="title">greeter/build.gradle</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">mainClassName = <span class="string"><span class="delimiter">'</span><span class="content">greeter.Greeter</span><span class="delimiter">'</span></span> <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Use <code>mainClassName</code> to set the entry point class. (This expects a class with a class emthod called <code>main</code>).</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
 <p>Run the build again, which now passes.</p>
 </div>
 <div class="listingblock">
@@ -439,11 +420,11 @@ Run with --stacktrace option to get the stack trace. Run with --info or --debug 
 :greeting-library:processResources NO-SOURCE
 :greeting-library:classes UP-TO-DATE
 :greeting-library:jar UP-TO-DATE
-:greeter:compileJava UP-TO-DATE
+:greeter:compileJava
 :greeter:compileGroovy NO-SOURCE
 :greeter:processResources NO-SOURCE
-:greeter:classes UP-TO-DATE
-:greeter:jar UP-TO-DATE
+:greeter:classes
+:greeter:jar
 :greeter:startScripts
 :greeter:distTar
 :greeter:distZip
@@ -468,7 +449,7 @@ BUILD SUCCESSFUL</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Notice how ach subproject is prefixed in the output, so that you know which task from which project is executed. Also note that Gradle does not process all tasks from one subproject, before moving onto another. It has processed enough tasks from <code>greeting-library</code> to be able to fulfill the project dependency needs of <code>greeter</code>.</p>
+<p>Notice how each subproject is prefixed in the output, so that you know which task from which project is executed. Also note that Gradle does not process all tasks from one subproject, before moving onto another. It has processed enough tasks from <code>greeting-library</code> to be able to fulfill the project dependency needs of <code>greeter</code>.</p>
 </div>
 <div class="paragraph">
 <p>Add a test to ensure your code in the application itself works. As Spock Framework is a popular approach to testing Java code as well, create the test by adding the <a href="https://docs.gradle.org/3.5/userguide/groovy_plugin.html">Groovy plugin</a> to the <code>build.gradle</code> script.</p>
@@ -626,7 +607,7 @@ build.dependsOn <span class="string"><span class="delimiter">'</span><span class
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Apply the Asciidoctor plugin this subproject</td>
+<td>Apply the Asciidoctor plugin this subproject. This is the technique to use to selectively apply plugins to subprojects, but define all of the plugins in the rootproject.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
@@ -882,7 +863,7 @@ dependencies {
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-06-05 20:22:14 UTC
+Last updated 2017-06-06 11:56:53 UTC
 </div>
 </div>
 </body>
