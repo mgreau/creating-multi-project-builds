@@ -312,7 +312,7 @@ $ mkdir -p src/test/groovy/greeter</pre>
 
     <span class="keyword">def</span> <span class="string"><span class="delimiter">'</span><span class="content">Creating a greeting</span><span class="delimiter">'</span></span>() {
 
-        <span class="key">expect</span>: <span class="string"><span class="delimiter">'</span><span class="content">The greeting to be correctly capitalized</span><span class="delimiter">'</span></span>
+        <span class="key">expect</span>: <span class="string"><span class="delimiter">'</span><span class="content">The greeeting to be correctly capitalized</span><span class="delimiter">'</span></span>
         GreetingFormatter.greeting(<span class="string"><span class="delimiter">'</span><span class="content">gradlephant</span><span class="delimiter">'</span></span>) == <span class="string"><span class="delimiter">'</span><span class="content">Hello, Gradlephant</span><span class="delimiter">'</span></span>
 
     }
@@ -340,7 +340,7 @@ $ mkdir -p src/test/groovy/greeter</pre>
 :greeting-library:check
 :greeting-library:build
 
-BUILD SUCCESSFUL in 45s
+BUILD SUCCESSFUL in 2m 59s
 4 actionable tasks: 4 executed</pre>
 </div>
 </div>
@@ -458,7 +458,7 @@ Run with --stacktrace option to get the stack trace. Run with --info or --debug 
 
 * Get more help at https://help.gradle.org
 
-BUILD FAILED in 5s</pre>
+BUILD FAILED in 18s</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -517,7 +517,7 @@ BUILD FAILED in 5s</pre>
 :greeting-library:check UP-TO-DATE
 :greeting-library:build UP-TO-DATE
 
-BUILD SUCCESSFUL in 11s
+BUILD SUCCESSFUL in 21s
 11 actionable tasks: 7 executed, 4 up-to-date</pre>
 </div>
 </div>
@@ -545,7 +545,7 @@ dependencies {
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Having <code>groovy</code> plugin automatically applies the <code>java</code> plugin, so you could actually deleted the <code>apply plugin : 'java'</code> line. However for semantics it might be better to keep both as it indicates that you are primarily building a Java project.</td>
+<td>Having <code>groovy</code> plugin automatically applies the <code>java</code> plugin, so you could actually deleted the <code>pply plugin : 'java'</code> line. However for semantics it might be better to keep both as it indicates that you are primarily building a Java project.</td>
 </tr>
 </table>
 </div>
@@ -598,7 +598,7 @@ dependencies {
 :greeter:testClasses UP-TO-DATE
 :greeter:test UP-TO-DATE
 
-BUILD SUCCESSFUL in 1s
+BUILD SUCCESSFUL in 0s
 5 actionable tasks: 5 up-to-date</pre>
 </div>
 </div>
@@ -758,7 +758,7 @@ If you run the command <code>./gradlew tasks</code>, you will now see a task cal
 
 :docs:asciidoctor
 
-BUILD SUCCESSFUL in 16s
+BUILD SUCCESSFUL in 41s
 1 actionable task: 1 executed</pre>
 </div>
 </div>
@@ -849,7 +849,7 @@ distTar {
 :greeting-library:check UP-TO-DATE
 :greeting-library:build UP-TO-DATE
 
-BUILD SUCCESSFUL in 2s
+BUILD SUCCESSFUL in 4s
 12 actionable tasks: 2 executed, 10 up-to-date</pre>
 </div>
 </div>
