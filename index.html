@@ -108,6 +108,7 @@
 <li><a href="#refactor_common_build_script_code">Refactor common build script code</a></li>
 <li><a href="#summary">Summary</a></li>
 <li><a href="#next_steps">Next Steps</a></li>
+<li><a href="#help_improve_this_guide">Help improve this guide</a></li>
 </ul>
 </div>
 </div>
@@ -183,7 +184,7 @@ BUILD SUCCESSFUL</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Great! You are now ready to start development. (Remember to save your file).</p>
+<p>Great! You are now ready to start development. (Remember to save your file.)</p>
 </div>
 </div>
 </div>
@@ -311,7 +312,7 @@ $ mkdir -p src/test/groovy/greeter</pre>
 
     <span class="keyword">def</span> <span class="string"><span class="delimiter">'</span><span class="content">Creating a greeting</span><span class="delimiter">'</span></span>() {
 
-        <span class="key">expect</span>: <span class="string"><span class="delimiter">'</span><span class="content">The greeeting to be correctly capitalized</span><span class="delimiter">'</span></span>
+        <span class="key">expect</span>: <span class="string"><span class="delimiter">'</span><span class="content">The greeting to be correctly capitalized</span><span class="delimiter">'</span></span>
         GreetingFormatter.greeting(<span class="string"><span class="delimiter">'</span><span class="content">gradlephant</span><span class="delimiter">'</span></span>) == <span class="string"><span class="delimiter">'</span><span class="content">Hello, Gradlephant</span><span class="delimiter">'</span></span>
 
     }
@@ -339,7 +340,7 @@ $ mkdir -p src/test/groovy/greeter</pre>
 :greeting-library:check
 :greeting-library:build
 
-BUILD SUCCESSFUL in 17s
+BUILD SUCCESSFUL in 19s
 4 actionable tasks: 4 executed</pre>
 </div>
 </div>
@@ -757,7 +758,7 @@ If you run the command <code>./gradlew tasks</code>, you will now see a task cal
 
 :docs:asciidoctor
 
-BUILD SUCCESSFUL in 9s
+BUILD SUCCESSFUL in 8s
 1 actionable task: 1 executed</pre>
 </div>
 </div>
@@ -974,6 +975,14 @@ dependencies {
 <p>Read about multi-project in the <a href="https://docs.gradle.org/4.5/userguide/multi_project_builds.html">User Manual</a></p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1 contribute">
+<h2 id="help_improve_this_guide"><a class="anchor" href="#help_improve_this_guide"></a><a class="link" href="#help_improve_this_guide">Help improve this guide</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Have feedback or a question? Found a typo? Like all Gradle guides, help is just a GitHub issue away. Please add an issue or pull request to <a href="https://github.com/gradle-guides/creating-multi-project-builds/">gradle-guides/creating-multi-project-builds</a> and we&#8217;ll get back to you.</p>
 </div>
 </div>
 </div>
