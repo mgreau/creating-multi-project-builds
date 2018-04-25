@@ -23,9 +23,7 @@ allprojects {
 // end::jcenter[]
 
 // tag::subproject-versions[]
-subprojects {
-    version = '1.0'
-}
+
 // end::subproject-versions[]
 
 // tag::common-code-1[]

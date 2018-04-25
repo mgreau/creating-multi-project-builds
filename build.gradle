@@ -20,6 +20,10 @@ test {
     inputs.dir 'src/example'
 }
 
+allprojects {
+    version = '1.0'
+}
+
 gradleRunner {
     inputs.dir 'src/example'
 
